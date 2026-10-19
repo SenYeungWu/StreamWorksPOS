@@ -1,4 +1,4 @@
-﻿# Environment Setup & Development Guide
+# Environment Setup & Development Guide
 ## Project: Stream Works (`pos`)
 
 ---
@@ -73,9 +73,10 @@ This guide details the complete workstation configuration, runtime prerequisites
 ## 3. Project Workspace Setup & Initialization
 
 ### 3.1 Repository Initialization
-1. Open PowerShell and navigate to the project directory:
+1. Clone the repository and navigate into the project directory:
    ```powershell
-   cd . # or your local project root
+   git clone https://github.com/SenYeungWu/StreamWorksPOS.git
+   cd StreamWorksPOS
    ```
 
 2. **Fetch Dependencies**:
@@ -129,18 +130,25 @@ While `flutter run` is active in the terminal:
 
 ## 5. Automated Testing Environment & Quality Gates
 
-In accordance with [SYSTEM_PROMPT.md](SYSTEM_PROMPT.md), **every feature must have an automated test created first**, and tests must be executed and passing prior to any git commit.
+In accordance with test-driven development (TDD) best practices, **every feature must have an automated test created first**, and tests must be executed and passing prior to any git commit.
 
 ### 5.1 Test Suite Structure
 ```
 test/
-├── unit/                         # Pure domain models, pricing calculations, use cases
-│   ├── cart_calculation_test.dart
-│   └── models_test.dart
-├── widget/                       # UI component tests, interaction verification
-│   ├── recent_orders_test.dart
-│   ├── rating_stars_test.dart
-│   └── cart_screen_test.dart
+├── unit/                         # Domain models, pricing, Riverpod controllers, and services
+│   ├── cached_repository_test.dart
+│   ├── cart_controller_test.dart
+│   ├── cart_test.dart
+│   ├── location_service_test.dart
+│   ├── models_test.dart
+│   ├── payment_service_test.dart
+│   ├── restaurant_repository_test.dart
+│   ├── secure_storage_test.dart
+│   └── telemetry_service_test.dart
+├── widget/                       # UI component and screen integration tests
+│   ├── cart_screen_test.dart
+│   ├── clean_ui_test.dart
+│   └── restaurant_screen_test.dart
 └── widget_test.dart              # Core smoke test
 ```
 

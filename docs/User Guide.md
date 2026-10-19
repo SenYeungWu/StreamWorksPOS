@@ -1,4 +1,4 @@
-﻿# Stream Works — User & Testing Guide
+# Stream Works — User & Testing Guide
 
 Welcome to **Stream Works** (formerly Meal Express), an artisanal food discovery and ordering mobile and web platform built with Flutter, Riverpod, and Clean Architecture.
 
@@ -346,7 +346,8 @@ flutter analyze
 
 For further details on system design, specifications, and deployment:
 
-- [Implementation Plan.md](docs/Implementation%20Plan.md) — Multi-phase execution roadmap and progress tracking log.
+- [Setup.md](docs/Setup.md) — Workstation onboarding, Flutter toolchain, and pre-commit workflow.
+- [Image Attributions.md](docs/Image%20Attributions.md) — Media asset licensing and Unsplash source catalog.
 - [Business Requirement Specification.md](docs/Business%20Requirement%20Specification.md) — Detailed functional requirements and business rules.
 - [Software Architecture.md](docs/Software%20Architecture.md) — Clean Architecture tiering, data flow diagrams, and state management specifications.
 - [Deployment.md](docs/Deployment.md) — Multi-platform distribution guide (Web PWA, Google Play, Apple App Store).
