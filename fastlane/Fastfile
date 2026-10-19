@@ -1,0 +1,46 @@
+default_platform(:all)
+
+platform :ios do
+  desc "Push release build to Apple TestFlight"
+  lane :beta do
+    build_app(
+      scheme: "Runner",
+      archive_path: "./build/ios/archive/Runner.xcarchive",
+      export_method: "app-store"
+    )
+    upload_to_testflight(
+      skip_waiting_for_build_processing: true
+    )
+  end
+
+  desc "Deploy to Apple App Store"
+  lane :release do
+    build_app(scheme: "Runner")
+    upload_to_app_store(
+      force: true,
+      skip_metadata: false,
+      skip_screenshots: true
+    )
+  end
+end
+
+platform :android do
+  desc "Deploy App Bundle to Google Play Internal Track"
+  lane :internal do
+    upload_to_play_store(
+      track: 'internal',
+      aab: '../build/app/outputs/bundle/release/app-release.aab',
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+  end
+
+  desc "Promote Google Play build to Production"
+  lane :production do
+    upload_to_play_store(
+      track: 'production',
+      aab: '../build/app/outputs/bundle/release/app-release.aab'
+    )
+  end
+end

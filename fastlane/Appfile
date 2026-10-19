@@ -1,0 +1,5 @@
+app_identifier("com.streamworks.pos")
+apple_id("dev@streamworks.app")
+team_id("SW89421DEV")
+package_name("com.streamworks.pos")
+json_key_file("fastlane/google-play-service-account.json")
