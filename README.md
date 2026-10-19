@@ -115,9 +115,9 @@ For in-depth technical details, consult the specifications in the [`docs/`](./do
 * 📄 [Business Requirement Specification (BRS)](./docs/Business%20Requirement%20Specification.md) — Comprehensive functional, non-functional, and user stories.
 * 🏗️ [Software Architecture Document (SAD)](./docs/Software%20Architecture.md) — High-level system design, Clean Architecture layers, state diagrams, and patterns.
 * 🛠️ [Setup Guide](./docs/Setup.md) — Step-by-step developer workstation onboarding and toolchain setup.
-* 🗺️ [Implementation Plan](./docs/Implementation%20Plan.md) — Architectural refactoring and component roadmap.
 * 🚢 [Deployment Guide](./docs/Deployment.md) — Production build steps, environment variables, and store release instructions.
 * 📖 [User Guide](./docs/User%20Guide.md) — End-user instructions and workflow walkthroughs.
+* 🖼️ [Asset & Image Attributions](./docs/Image%20Attributions.md) — Licensing and photography catalog (Unsplash).
 
 ---
 
